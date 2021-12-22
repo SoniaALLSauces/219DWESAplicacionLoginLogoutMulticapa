@@ -3,10 +3,17 @@
     /* 
      * Author: Sonia Antón Llanes
      * Created on: 16-diciembre-2021
-     * Last Modify: 16-diciembre-2021
+     * Last Modify: 22-diciembre-2021
      * IDIOMAS: contine las palabras en los distintos idiomas
      *   que se van a usar en los archivos de codigo
      */
+
+     /*CREAR UNA SOLA VARIABLE:
+        $aIdio;as = [
+            'es' => ['formulario' => 'Formulario',
+                     'inicio' => 'INICIAR SESION',
+                     ......]
+      */
 
         /* palabras en ESPAÑOL */
             $aIdiomas['es']=[

@@ -1,29 +1,15 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
+<?php
 
-            /**
-             * @author Sonia Anton Llanes
-             * @created 21/12/2021
-             * @updated: 21/12/2021
-             */
-        
-            //
-            require_once 'config/confApp.php';
-            require_once 'config/confDBPO.php';
-            
-            
 
-        ?>
-    </body>
-</html>
+    /**
+     * @author Sonia Anton Llanes
+     * @created 22/12/2021
+     * @updated: 22/12/2021
+     */
+
+
+//Importamos todos los archivos necesarios para index
+    require_once 'config/confApp.php'; //archivo que contiene todos los archivos y los arrays de archivos necesarios
+
+//Requerimos que se cargue el controlador del login
+    require_once $controladores['login'];

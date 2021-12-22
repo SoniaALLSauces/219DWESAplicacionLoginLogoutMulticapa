@@ -20,5 +20,14 @@
             private $fechaHoraConexionAnterior;
             private $perfil;
             
+            //Constructor
+                function __construct() {
+                    ;
+                }
+            
+            //Getter
+            
+            //Setter
+            
         }
         
