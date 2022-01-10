@@ -4,7 +4,7 @@
      * Author: Sonia Antón Llanes
      * Created on: 22-diciembre-2021
      * Last Modify: 22-diciembre-2021
-     * LAYOUT PROYECTO LOGIN LOGOUT: ventana para 
+     * LAYOUT PROYECTO LOGIN LOGOUT: ventana con el html header, main con $vistaEnCurso y footer
      */
 
     //Importamos todos los archivos necesarios
@@ -20,9 +20,9 @@
         <meta charset="utf-8">
         <title>Sonia Anton Llanes - Login Logout Multicapa</title>
         <meta name="author" content="Sonia Antón Llanes">
-        <meta name="description" content="Proyecto DAW2">
+        <meta name="description" content="Proyecto LogIn LogOut Multicapa">
         <meta name="keywords" content="">
-        <link href="webroot/css/estiloej.css" rel="stylesheet" type="text/css">
+        <link href="webroot/css/style.css" rel="stylesheet" type="text/css">
         <link href="webroot/images/mariposa_vintage.png" rel="icon" type="image/png">	
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
@@ -32,19 +32,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     </head>
     <body class="container">
+
 	<main class="main">
-            <header class="divh2">
-                <h2 class="centrado"><a href="../../proyectoDWES/indexProyectoDWES.php" style="border-bottom: 2px solid black; color:black;">DWES</a> -
-                    Proyecto Login Logout Tema 5</h2> 
-            </header>
-            <section>
+                <div class="header">
+                    <h2 class="centrado"><a href="../../proyectoDWES/indexProyectoDWES.php" style="border-bottom: 2px solid black; color:black;">DWES</a> -
+                        Proyecto Login Logout Multicapa</h2> 
+                </div>
+            
                 <?php require_once $vistaEnCurso; ?>
-            </section>
+            
         </main>
+        
         <footer class="footer">
             <nav class="fnav">
                 <ul>
-                    <li class="ftexto"><a href="../index.html">&copy 2020-21. Sonia Anton LLanes - v.2 - 03/12/2021</a></li>
+                    <li class="ftexto"><a href="../index.html">&copy 2020-21. Sonia Anton LLanes </a></li>
                     <li>                       
                         <a class="maxMedia" href="doc/curriculum_SALL.pdf" target="_blank"><img src="webroot/images/CV.png" alt="imagen_CV"></a>
                         <a class="maxMedia" href=""><img src="webroot/images/linkedin.png" alt="imagen_linkedIn"></a>
