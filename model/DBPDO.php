@@ -6,12 +6,13 @@
      * @updated  11/01/2022
      */
 
+
      /**
       * @class DBPDO
       * 
       * 
       */
-
+         
         class DBPDO{
             /**
              * 
@@ -20,9 +21,7 @@
              * @return object PDOStatement 
              */
             public static function ejecutaConsulta($entrada_sentenciaSQL, $entrada_parametros) {
-                
-                require_once '../config/confDB.php';  //importamos archivo que contiene los parametros de la conexion
-                    
+            
                 try{
                     $miDB = new PDO (HOST, USER, PASSWORD);  //establezco conexión con objeto PDO 
                     $miDB ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  //y siempre lanzo excepción utilizando manejador propio PDOException cuando se produce un error
@@ -41,6 +40,5 @@
                 
                 return $consulta;
             }
-
-            
+   
         }

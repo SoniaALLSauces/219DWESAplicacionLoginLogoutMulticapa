@@ -9,6 +9,9 @@
 
 
 //Importamos todos los archivos necesarios para la aplicación
+    //Archivo que contiene todos los archivos y los arrays de archivos necesarios
+        require_once 'config/confDB.php';
+
     //Libreria de validacion
         require_once 'core/libreriaValidacion.php';
     
@@ -23,7 +26,7 @@
 //Array con los controladores
     $controladores = [
         'login' => 'controller/cLogin.php',
-        'inicio' => 'controller/cInicio.php'
+        'inicio' => 'controller/cInicioPrivada.php'
     ];
 
 //Array con las vistas

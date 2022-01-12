@@ -29,7 +29,11 @@
                     
                     <tr>
                         <td colspan="2">
-                            <div class="error"></div>
+                            <div class="error"><?php
+                                if ($aErrores['usuario']!=NULL || $aErrores['password']!=NULL) { //si hay errores muestra el mensaje
+                                    echo "<span style=\"color:red;\">usuario y/o contraseña incorrecto</span>"; //aparece el mensaje de error que tiene el array aErrores
+                                }
+                            ?></div>
                         </td>
                     </tr>
                     <tr><td class="vacio"></td></tr>
