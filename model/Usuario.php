@@ -17,7 +17,7 @@
             private $codUsuario;
             private $password;
             private $descUsuario;
-            private $numAccesos;
+            private $numConexiones;
             private $fechaHoraUltimaHora;
             private $fechaHoraConexionAnterior;
             private $perfil;

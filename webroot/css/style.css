@@ -45,6 +45,21 @@ a{text-decoration: none; color:#000; }
     left: 0px;
 }
 
+.botones{
+    position: relative;
+    float: right;
+    right: 10px;}
+button{
+    height: 60px;
+}
+
+.saludo{
+    width: 500px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
 .tLogin{
     width: 50%;
 }
@@ -61,8 +76,6 @@ a{text-decoration: none; color:#000; }
 }
 #login, #register{
     width: 85%;
-    background: #ecaaa1;
-    font-size: 2vw;
 }
 
 .fnav ul li{
@@ -85,6 +98,12 @@ a{text-decoration: none; color:#000; }
 }
 h2{
     margin: 1% 1%;
+}
+
+.saludo{
+    border: 2px solid #BF2411;
+    border-radius: 10px;
+    padding: 40px;
 }
 
 .tLogin{
@@ -115,6 +134,15 @@ input{
     margin: 5px;
     padding: 5px 20px;
 }
+.error{
+    margin-top: 20px;
+}
+
+button{
+    border: 2px solid #BF2411;
+    margin: 5px 10px;
+    padding: 5px 20px;
+}
 
 .footer{
     border-top: 2px solid #BF2411;
@@ -139,6 +167,10 @@ h2{
     background: white;
 }
 #login, #register{
+    background: #ecaaa1;
+}
+
+button, .saludo{
     background: #ecaaa1;
 }
 
@@ -170,13 +202,21 @@ h4{
 .button{
     font-size: 1.3rem;
 }
+button{
+    font-size: 1.8vw;
+    vertical-align: middle;
+}
 
 .tLogin{
     text-align: center;
 }
-.dato, .error{
+.dato{
     font-size: 18px;
     text-align: left;
+}
+.error{
+    font-size: 18px;
+    text-align: center;
 }
 .datoUsu>input{
     font-size: 20px;

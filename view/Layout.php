@@ -50,7 +50,7 @@
                     <li>                       
                         <a class="maxMedia" href="doc/curriculum_SALL.pdf" target="_blank"><img src="webroot/images/CV.png" alt="imagen_CV"></a>
                         <a class="maxMedia" href=""><img src="webroot/images/linkedin.png" alt="imagen_linkedIn"></a>
-                        <a class="maxMedia" href="https://github.com/SoniaALLSauces/219DWESProyectoLoginLogoutTema5.git" target="_blank"><img src="webroot/images/github.png" alt="imagen_github"></a>
+                        <a class="maxMedia" href="https://github.com/SoniaALLSauces/AplicacionLoginLogoutMulticapa.git" target="_blank"><img src="webroot/images/github.png" alt="imagen_github"></a>
                     </li>
                 </ul>
             </nav>

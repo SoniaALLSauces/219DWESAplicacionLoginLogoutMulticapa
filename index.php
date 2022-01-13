@@ -11,5 +11,12 @@
 //Importamos todos los archivos necesarios para index
     require_once 'config/confApp.php'; //archivo que contiene todos los archivos y los arrays de archivos necesarios
 
-//Requerimos que se cargue el controlador del login
-    require_once $controladores['login'];
+//Iniciamos Sesion
+    session_start();
+
+//Requerimos que se cargue el controlador según si se ha iniciado sesión o no
+    if(isset($_SESSION["paginaEnCurso"])){
+        require_once $controladores[$_SESSION["paginaEnCurso"]];  //cuando existe una sesion, abro el controlador que hay en la variable
+    } else{
+        require_once $controladores['login'];  //cuando es la primera vez que entro y no hemos iniciado sesion abro el controlador del login
+    }

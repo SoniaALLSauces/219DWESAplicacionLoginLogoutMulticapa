@@ -6,16 +6,18 @@
 
 
     /* Creo la base de datos DAW2xxxDBDepartamentos */
-        create database if not exists DB219DWESLoginLogoutTema5;
+        create database if not exists DB219DWESLoginLogoutMulticapa;
 
     /* Creo el usuario */
-        create user if not exists 'user219DWESLoginLogoutTema5'@'%' identified by 'paso';
+--         create user if not exists 'user219DWESLoginLogoutMulticapa'@'%' identified by 'paso';      /*INSTITUTO*/
+        create user if not exists 'user219DWESLoginLogoutMulticapa'@'%' identified by 'P@ssw0rd';  /*CASA*/
+
 
     /* Damos permisos al usuario sobre la base de datos DB219DWESProyectoTema5 */
-        grant all privileges on DB219DWESLoginLogoutTema5.* to 'user219DWESLoginLogoutTema5'@'%';
+        grant all privileges on DB219DWESLoginLogoutMulticapa.* to 'user219DWESLoginLogoutMulticapa'@'%';
 
     /* Pongo en uso la base de datos creada en script DB219DWESProyectoTema5 */
-        use DB219DWESLoginLogoutTema5;  
+        use DB219DWESLoginLogoutMulticapa;  
 
     /* Creo la tabla Usuarios si no existe */
         create table if not exists T01_Usuario(  
@@ -24,6 +26,7 @@
             T01_DescUsuario varchar(255),
             T01_NumConexiones int default 0,
             T01_FechaHoraUltimaConexion int,
+            T01_FechaHoraUltimaConexionAnterior int,
             T01_Perfil enum('usuario','administrador') default 'usuario',
             T01_ImagenUsuario mediumblob) engine=innodb;
 
