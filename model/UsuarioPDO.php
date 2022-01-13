@@ -37,29 +37,38 @@
                     if ($rdoConsulta->rowCount()==0){  //si no encuentra ningún registro (usuario y contraseña)
                         return false;
                     } else{
-                        return $oUsuario;
+                        $usuarioActual= new Usuario($oUsuario -> T01_CodUsuario,
+                                                    $oUsuario -> T01_Password,
+                                                    $oUsuario -> T01_DescUsuario,
+                                                    $oUsuario -> T01_NumConexiones,
+                                                    $oUsuario -> T01_FechaHoraUltimaConexion,
+                                                    $oUsuario -> T01_Perfil);
+                        return $usuarioActual;
                     }
+                    
             }
             
             /**
              * 
              * @param type $entrada_codUsuario - codigo del usuario en el cual quiero modificar el numero de conexiones y la fecha de la ultima conexion
              */
-            public static function entradaUsuario($entrada_codUsuario){
-                //Actualizo los datos: fecha ultima conexion y numero de conexiones del usuario que se ha logeado
-                $sqlUpdate = <<<EOD
-                                  UPDATE T01_Usuario SET 
-                                    T01_NumConexiones = T01_NumConexiones+1 ,
-                                    T01_FechaHoraUltimaConexionAnterior = T01_FechaHoraUltimaConexion,
-                                    T01_FechaHoraUltimaConexion = :ultimaconexion
-                                  WHERE T01_CodUsuario=:codUsuario;
-                                EOD;
-                $fechaAhora = new DateTime();  //variable para guardar la fecha y hora del momento de la conexion
-                $ahora = $fechaAhora->getTimestamp();
-                $parametros = [':ultimaconexion' => $ahora,
-                               ':codUsuario' => $entrada_codUsuario];
-                
-                $rdoUpdate = DBPDO::ejecutaConsulta($sqlUpdate, $parametros);
+            public static function registrarUltimaConexion($oUsuario){
+                //Actualizo los datos: fecha/hora ultima conexion 
+                    $sqlUpdate = <<<EOD
+                                      UPDATE T01_Usuario SET 
+                                        T01_NumConexiones = T01_NumConexiones+1,
+                                        T01_FechaHoraUltimaConexion = :ultimaconexion
+                                      WHERE T01_CodUsuario=:codUsuario;
+                                    EOD;
+                    $fechaAhora = new DateTime();  //variable para guardar la fecha y hora del momento de la conexion
+                    $ahora = $fechaAhora->getTimestamp();
+                    $parametros = [':ultimaconexion' => $ahora,
+                                   ':codUsuario' => $oUsuario->$codUsuario];
+                    $rdoUpdate = DBPDO::ejecutaConsulta($sqlUpdate, $parametros);
+                //Actualizo el objeto $oUsuario
+                    $oUsuario.__set($numConexiones, $rdoUpdate->T01_NumConexiones);
+                    $oUsuario.__set($fechaHoraUltimaHora, $rdoUpdate->T01_FechaHoraUltimaConexion);
+                return $oUsuario;
             }
             
             public static function altaUsuario(){
@@ -67,6 +76,10 @@
             }
             
             public static function modificarUsuario(){
+                
+            }
+            
+            public static function cambiarPassword(){
                 
             }
             

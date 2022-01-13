@@ -7,7 +7,6 @@
      * @updated: 22/12/2021
      */
 
-
     
         $entradaOK = true;  //Variable para indicar que el formulario esta correcto
     //Array para guardar los errores del formulario:
@@ -28,10 +27,7 @@
                                 if (!$oUsuario){  //si no encuentra ningún registro (usuario y contraseña)
                                     $aErrores['usuario']= "usuario no encontrado";
                                     $entradaOK = false;
-                                } else{  //EXISTE USUARIO
-                                    UsuarioPDO::entradaUsuario($_REQUEST['usuario']);
-                                    $_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']= $oUsuario;  //Guardamos el registro en la sesion
-                                }
+                                } 
                         }
                 }
     }
@@ -40,12 +36,19 @@
     }
 
     if($entradaOK){  //Si todas las entradas son correctas
+        $oUsuario.__set($fechaHoraConexionAnterior, $oUsuario->T01_FechaHoraUltimaConexion);
+        $oUsuario=UsuarioPDO::registrarUltimaConexion($oUsuario);   //modificamos el usuario con los datos de la ultima entrada
+        
+        $_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']= $usuarioActual;  //Guardamos el registro de usuario en la sesion
+        //$_SESSION['pagina']= 'inicio';
+                                
         $vistaEnCurso= $vistas['inicio'];  //la vista en curso es el archivo vInicio.php
     }   
     else{   //Si no son correctas o aun no se ha pulsado "Iniciar Sesion"
+        //$_SESSION['pagina']= 'login';
         $vistaEnCurso= $vistas['login'];   //la vista en curso es el archivo vLogin.php
     }
     
 
-    
+    //salida:
     require_once 'view/Layout.php';    //llamamos que se ejecute layout
