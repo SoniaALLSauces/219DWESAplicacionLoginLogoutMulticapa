@@ -2,9 +2,9 @@
 
     /* 
      * Author: Sonia Antón Llanes
-     * Created on: 22-diciembre-2021
-     * Last Modify: 22-diciembre-2021
-     * LAYOUT PROYECTO LOGIN LOGOUT: ventana con el html header, main con $vistaEnCurso y footer
+     * Created on: 13-enero-2022
+     * Last Modify: 14-enero-2022
+     * LAYOUT PROYECTO LOGIN LOGOUT: ventana publica de mi aplicación
      */
 
     //Importamos todos los archivos necesarios
@@ -22,7 +22,7 @@
         <meta name="author" content="Sonia Antón Llanes">
         <meta name="description" content="Proyecto LogIn LogOut Multicapa">
         <meta name="keywords" content="">
-        <link href="webroot/css/style.css" rel="stylesheet" type="text/css">
+        <link href="webroot/css/stylePublic.css" rel="stylesheet" type="text/css">
         <link href="webroot/images/mariposa_vintage.png" rel="icon" type="image/png">	
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
                         Proyecto Login Logout Multicapa</h2> 
                 </div>
             
-                <?php require_once $vistas[$_SESSION['pagina']]; ?>
+                <?php require_once $vistas['inicioPublico']; ?>
             
         </main>
         

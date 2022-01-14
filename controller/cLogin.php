@@ -4,9 +4,8 @@
     /**
      * @author Sonia Anton Llanes
      * @created 22/12/2021
-     * @updated: 22/12/2021
+     * @updated: 13/01/2021
      */
-
 
     
         $entradaOK = true;  //Variable para indicar que el formulario esta correcto
@@ -28,10 +27,7 @@
                                 if (!$oUsuario){  //si no encuentra ningún registro (usuario y contraseña)
                                     $aErrores['usuario']= "usuario no encontrado";
                                     $entradaOK = false;
-                                } else{  //EXISTE USUARIO
-                                    UsuarioPDO::entradaUsuario($_REQUEST['usuario']);
-                                    $_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']= $oUsuario;  //Guardamos el registro en la sesion
-                                }
+                                } 
                         }
                 }
     }
@@ -40,12 +36,18 @@
     }
 
     if($entradaOK){  //Si todas las entradas son correctas
-        $vistaEnCurso= $vistas['inicio'];  //la vista en curso es el archivo vInicio.php
+        $oUsuario->setFechaHoraConexionAnterior($oUsuario->getFechaHoraUltimaConexion());  //guardamos la fecha/hora de la ultima conexion antes de modificar
+        $usuarioActual=UsuarioPDO::registrarUltimaConexion($oUsuario);   //modificamos el usuario con los datos de la ultima entrada
+        $_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']= $usuarioActual;  //Guardamos el objeto usuario en la sesion
+        $_SESSION['pagina']= 'inicioPrivado';  //guardamos en la sesión para controlador y vista en 'inicio'
+        
+            header('Location: index.php');  //recargo el fichero index.php
+            exit;
     }   
-    else{   //Si no son correctas o aun no se ha pulsado "Iniciar Sesion"
-        $vistaEnCurso= $vistas['login'];   //la vista en curso es el archivo vLogin.php
+    else{   //Si no son correctas o aun no se ha pulsado "Iniciar Sesion" 
+        $_SESSION['pagina']= 'login';   //guardamos en la sesión para controlador y vista en 'login'
     }
     
 
-    
+    //salida:
     require_once 'view/Layout.php';    //llamamos que se ejecute layout

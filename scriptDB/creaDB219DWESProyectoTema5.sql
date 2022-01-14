@@ -9,8 +9,8 @@
         create database if not exists DB219DWESLoginLogoutMulticapa;
 
     /* Creo el usuario */
---         create user if not exists 'user219DWESLoginLogoutMulticapa'@'%' identified by 'paso';      /*INSTITUTO*/
-        create user if not exists 'user219DWESLoginLogoutMulticapa'@'%' identified by 'P@ssw0rd';  /*CASA*/
+        create user if not exists 'user219DWESLoginLogoutMulticapa'@'%' identified by 'paso';      /*INSTITUTO*/
+--         create user if not exists 'user219DWESLoginLogoutMulticapa'@'%' identified by 'P@ssw0rd';  /*CASA*/
 
 
     /* Damos permisos al usuario sobre la base de datos DB219DWESProyectoTema5 */
@@ -26,7 +26,6 @@
             T01_DescUsuario varchar(255),
             T01_NumConexiones int default 0,
             T01_FechaHoraUltimaConexion int,
-            T01_FechaHoraUltimaConexionAnterior int,
             T01_Perfil enum('usuario','administrador') default 'usuario',
             T01_ImagenUsuario mediumblob) engine=innodb;
 

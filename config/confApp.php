@@ -25,13 +25,15 @@
 
 //Array con los controladores
     $controladores = [
+        'inicioPublico' => 'controller/cInicioPublico.php',
         'login' => 'controller/cLogin.php',
-        'inicio' => 'controller/cInicioPrivada.php'
+        'inicioPrivado' => 'controller/cInicioPrivado.php'
     ];
 
 //Array con las vistas
     $vistas = [
         'layout' => 'view/Layout.php',
+        'inicioPublico' => 'view/vInicioPublico.php',
         'login' => 'view/vLogin.php',
-        'inicio' => 'view/vInicio.php'
+        'inicioPrivado' => 'view/vInicioPrivado.php'
     ];
