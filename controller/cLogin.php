@@ -35,6 +35,7 @@
         $entradaOK = false;   // si no se pulsa enviar, entradaOK es false
     }
 
+
     if($entradaOK){  //Si todas las entradas son correctas
         $oUsuario->setFechaHoraConexionAnterior($oUsuario->getFechaHoraUltimaConexion());  //guardamos la fecha/hora de la ultima conexion antes de modificar
         $usuarioActual=UsuarioPDO::registrarUltimaConexion($oUsuario);   //modificamos el usuario con los datos de la ultima entrada
@@ -49,5 +50,4 @@
     }
     
 
-    //salida:
     require_once 'view/Layout.php';    //llamamos que se ejecute layout

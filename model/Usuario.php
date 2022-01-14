@@ -30,6 +30,7 @@
              * @param string $password - contraseña/password del usuario
              * @param string $descUsuario - nombre y apellidos del usuario
              */
+
                 public function __construct($codUsuario,$password,$descUsuario,$numConexiones,$fechaHoraUltimaConexion,$fechaHoraConexionAnterior,$perfil) {
                     $this->codUsuario = $codUsuario;
                     $this->password = $password;
@@ -66,7 +67,7 @@
                 public function getFechaHoraConexionAnterior(){
                     return $this->fechaHoraConexionAnterior;
                 }
-            
+         
             //Setter
             /**
              * Metodo mágico __set() - modifica el valor del atributo, ambos pasados por parámetro
