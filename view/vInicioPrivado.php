@@ -14,24 +14,29 @@
             </a>
         </div>
 
-        <section class="botones">
+<!--        <section class="botones">
             <button>Editar Perfil</button>
             <button>Detalle</button>
             <button>Log Out</button>
-        </section>
+        </section>-->
+        <form class="botones" name="inicio" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+            <input type="submit" value="Editar Perfil" name="editarPerfil">
+            <input type="submit" value="Detalle" name="detalle">
+            <input type="submit" value="Cerrar sesión" name="cerrarSesion">
+        </form>
 
         <section class="datosUsuario">
             
             <article  class="saludo">
-                <p>BIENVENID@   <?php echo $_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']->T01_DescUsuario ?></p>
+                <p>BIENVENID@   <?php echo $descripcion ?></p>
                 
                 <?php
-                    if ($_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']->T01_NumConexiones==1){
+                    if ($conexiones==1){
                         echo "<p>Esta es la PRIMERA vez que se conecta.</p>";
                     } else{
-                        echo "<p>Es la ".$_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']->T01_NumConexiones."ª vez que se conecta.</p>";
+                        echo "<p>Es la ".$conexiones."ª vez que se conecta.</p>";
                         $ultimaConexion = new DateTime();
-                        $ultimaConexionFormat = $ultimaConexion-> setTimestamp($_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']->T01_FechaHoraUltimaConexionAnterior) -> format ('d-m-Y H:i:s');
+                        $ultimaConexionFormat = $ultimaConexion-> setTimestamp($conexionAnterior) -> format ('d-m-Y H:i:s');
                         echo "<p>Y se conectó por ultima vez el: $ultimaConexionFormat </p>";
                     }
                 ?>

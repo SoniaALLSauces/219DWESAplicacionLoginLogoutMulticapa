@@ -18,7 +18,7 @@
             private $password;
             private $descUsuario;
             private $numConexiones;
-            private $fechaHoraUltimaHora;
+            private $fechaHoraUltimaConexion;
             private $fechaHoraConexionAnterior;
             private $perfil;
             
@@ -31,13 +31,13 @@
              * @param string $descUsuario - nombre y apellidos del usuario
              */
                 public function __construct($codUsuario,$password,$descUsuario,$numConexiones,$fechaHoraUltimaConexion,$fechaHoraConexionAnterior,$perfil) {
-                    $this->$codUsuario = $codUsuario;
-                    $this->$password = $password;
-                    $this->$descUsuario = $descUsuario;
-                    $this->$numConexiones = $numConexiones;
-                    $this->$fechaHoraUltimaHora = $fechaHoraUltimaConexion;
-                    $this->$fechaHoraConexionAnterior = $fechaHoraConexionAnterior;
-                    $this->$perfil = $perfil;
+                    $this->codUsuario = $codUsuario;
+                    $this->password = $password;
+                    $this->descUsuario = $descUsuario;
+                    $this->numConexiones = $numConexiones;
+                    $this->fechaHoraUltimaConexion = $fechaHoraUltimaConexion;
+                    $this->fechaHoraConexionAnterior = $fechaHoraConexionAnterior;
+                    $this->perfil = $perfil;
                 }
             
             //Getter
@@ -50,6 +50,22 @@
                 public function __get($atributo) {
                     return $this->$atributo;
                 }
+                
+                public function getCodUsuario(){
+                    return $this->codUsuario;
+                }
+                public function getDescUsuario(){
+                    return $this->descUsuario;
+                }
+                public function getNumConexiones(){
+                    return $this->numConexiones;
+                }
+                public function getFechaHoraUltimaConexion(){
+                    return $this->fechaHoraUltimaConexion;
+                }
+                public function getFechaHoraConexionAnterior(){
+                    return $this->fechaHoraConexionAnterior;
+                }
             
             //Setter
             /**
@@ -61,6 +77,16 @@
                 public function __set($atributo, $valor){
                     $this->$atributo = $valor;
                 }
-            
+                
+                public function setNumConexiones($numConexiones){
+                    $this->numConexiones = $numConexiones;
+                }
+                public function setFechaHoraUltimaConexion($fechaHoraUltimaConexion){
+                    $this->fechaHoraUltimaConexion = $fechaHoraUltimaConexion;
+                }
+                public function setFechaHoraConexionAnterior($fechaHoraConexionAnterior){
+                    $this->fechaHoraConexionAnterior = $fechaHoraConexionAnterior;
+                }
+                
         }
         

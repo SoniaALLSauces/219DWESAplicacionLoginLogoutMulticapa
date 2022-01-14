@@ -4,7 +4,7 @@
     /**
      * @author Sonia Anton Llanes
      * @created 22/12/2021
-     * @updated: 22/12/2021
+     * @updated: 13/01/2021
      */
 
     
@@ -36,17 +36,16 @@
     }
 
     if($entradaOK){  //Si todas las entradas son correctas
-        $oUsuario.__set($fechaHoraConexionAnterior, $oUsuario->T01_FechaHoraUltimaConexion);
-        $oUsuario=UsuarioPDO::registrarUltimaConexion($oUsuario);   //modificamos el usuario con los datos de la ultima entrada
+        $oUsuario->setFechaHoraConexionAnterior($oUsuario->getFechaHoraUltimaConexion());  //guardamos la fecha/hora de la ultima conexion antes de modificar
+        $usuarioActual=UsuarioPDO::registrarUltimaConexion($oUsuario);   //modificamos el usuario con los datos de la ultima entrada
+        $_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']= $usuarioActual;  //Guardamos el objeto usuario en la sesion
+        $_SESSION['pagina']= 'inicioPrivado';  //guardamos en la sesión para controlador y vista en 'inicio'
         
-        $_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']= $usuarioActual;  //Guardamos el registro de usuario en la sesion
-        //$_SESSION['pagina']= 'inicio';
-                                
-        $vistaEnCurso= $vistas['inicio'];  //la vista en curso es el archivo vInicio.php
+            header('Location: index.php');  //recargo el fichero index.php
+            exit;
     }   
-    else{   //Si no son correctas o aun no se ha pulsado "Iniciar Sesion"
-        //$_SESSION['pagina']= 'login';
-        $vistaEnCurso= $vistas['login'];   //la vista en curso es el archivo vLogin.php
+    else{   //Si no son correctas o aun no se ha pulsado "Iniciar Sesion" 
+        $_SESSION['pagina']= 'login';   //guardamos en la sesión para controlador y vista en 'login'
     }
     
 

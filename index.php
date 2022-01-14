@@ -15,8 +15,8 @@
     session_start();
 
 //Requerimos que se cargue el controlador según si se ha iniciado sesión o no
-    if(isset($_SESSION["pagina"])){
-        require_once $controladores[$_SESSION["pagina"]];  //cuando existe una sesion, abro el controlador que hay en la variable
+    if(isset($_SESSION['pagina'])){
+        require_once $controladores[$_SESSION['pagina']];  //cuando existe una sesion, abro el controlador que hay en la variable
     } else{
-        require_once $controladores['login'];  //cuando es la primera vez que entro y no hemos iniciado sesion abro el controlador del login
+        require_once $controladores['inicioPublico'];  //cuando es la primera vez que entro y no hemos iniciado sesion abro el controlador del login
     }

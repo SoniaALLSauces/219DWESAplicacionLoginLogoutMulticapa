@@ -39,7 +39,7 @@
                         Proyecto Login Logout Multicapa</h2> 
                 </div>
             
-                <?php require_once $vistaEnCurso; ?>
+                <?php require_once $vistas[$_SESSION['pagina']]; ?>
             
         </main>
         
