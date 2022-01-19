@@ -7,7 +7,15 @@
 
 
   <section class="login">
-      <div>
+        
+        <div class="volver">
+            <form name="volver" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+                <input id="volverD" name="volver" type="submit" value="Volver">
+                <!--<input type="image" id="volver" src="webroot/images/volver.png" alt="Volver" title="Volver" width="100px">-->
+            </form>
+        </div>
+      
+        <div>
             <!-- $_SESSION -->
                 <table class="tableVariable">
                     <tr>
@@ -18,7 +26,9 @@
                     <?php
                         foreach ($_SESSION as $elemento => $valor) {
                             echo "<tr>";
-                            print_r("<td class=\"td\">$elemento</td> <td class=\"td\">$valor</td>");
+                            echo "<td class=\"td\">$elemento</td> <td class=\"td\">";
+                                print_r($valor);
+                            echo "</td>";
                             echo "</tr>";
                         }
                     ?>

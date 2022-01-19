@@ -38,19 +38,27 @@ a{text-decoration: none; color:#000; }
 .header{
     width: 100%;
 }
-.volver>img{
+.volver>*{
     width: 100px;
     position: fixed;
     top: 0px;
     left: 0px;
 }
 
+.botones>*
+.mtoDepartamentos>*{
+    height: 60px;
+}
 .botones{
     position: relative;
     float: right;
-    right: 10px;}
-.botones>*{
-    height: 60px;
+    right: 10px;
+}
+.mtoDepartamentos{
+    position: relative;
+    float: right;
+    right: 10px;
+    top: 70px;
 }
 
 .saludo{
@@ -62,7 +70,7 @@ a{text-decoration: none; color:#000; }
 .miWeb{
     width: 70vw;
     height: 70vh;
-    line-height: 30vh;
+    line-height: 25vh;
 }
 
 .tLogin{
@@ -113,6 +121,9 @@ h2{
     padding: 40px;
 }
 
+#volver{
+    border: 0px;
+}
 .tLogin{
     border: 1px solid black;
     margin: 20px auto;
@@ -145,7 +156,8 @@ input{
     margin-top: 20px;
 }
 
-.botones>*{
+.botones>*
+.mtoDepartamentos>*{
     border: 2px solid #BF2411;
     margin: 5px 10px;
     padding: 5px 20px;
@@ -177,7 +189,9 @@ h2{
     background: #ecaaa1;
 }
 
-.botones>*, .saludo{
+.botones>*, 
+.mtoDepartamentos>*,
+.saludo{
     background: #ecaaa1;
 }
 
@@ -216,7 +230,8 @@ h4{
 .button{
     font-size: 1.3rem;
 }
-.botones>*{
+.botones>*,
+.mtoDepartamentos>*{
     font-size: 1.8vw;
     vertical-align: middle;
 }

@@ -8,10 +8,16 @@
 
     <section class="inicio">
 
-        <div class="volver">
+<!--        <div class="volver">
             <a class="volver" href="">
                 <img src="webroot/images/volver.png">
             </a>
+        </div>-->
+        <div class="volver">
+            <form name="volver" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+                <input id="volver" name="volver" type="submit" value="Volver">
+                <!--<input type="image" id="volver" src="webroot/images/volver.png" alt="Volver" title="Volver" width="100px">-->
+            </form>
         </div>
 
 <!--        <section class="botones">
@@ -20,9 +26,12 @@
             <button>Log Out</button>
         </section>-->
         <form class="botones" name="inicio" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-            <input type="submit" value="Editar Perfil" name="editarPerfil">
-            <input type="submit" value="Detalle" name="detalle">
-            <input type="submit" value="Cerrar sesión" name="cerrarSesion">
+            <input type="submit" id="editarPerfil" value="Editar Perfil" name="editarPerfil">
+            <input type="submit" id="detalle" value="Detalle" name="detalle">
+            <input type="submit" id="cerrarSesion" value="Cerrar sesión" name="cerrarSesion">
+        </form>
+        <form class="mtoDepartamentos" name="workingProgress" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+            <input type="submit" id="workingProgress" value="Mantenimiento Departamentos" name="workingProgress">
         </form>
 
         <section class="datosUsuario">

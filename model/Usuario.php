@@ -21,6 +21,8 @@
             private $fechaHoraUltimaConexion;
             private $fechaHoraConexionAnterior;
             private $perfil;
+            private $imagenUsuario;
+            private $listaOpinionesUsuario;
             
             //Constructor
             /**

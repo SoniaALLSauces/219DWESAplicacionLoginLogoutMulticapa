@@ -9,6 +9,7 @@
 
 
     if (isset($_REQUEST['log'])){
+        $_SESSION['paginaAnterior']=$_SESSION['pagina']; //
         $_SESSION['pagina']='login';  //cuando existe una sesion, abro el controlador que hay en la variable
         header('Location: index.php');  //recargo el fichero index.php
             exit;

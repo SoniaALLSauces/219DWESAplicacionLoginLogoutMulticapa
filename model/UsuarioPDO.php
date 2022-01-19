@@ -1,9 +1,11 @@
 <?php
 
     /**
+     * Conexion de usuarios a través de POO (Proyecto Orientado a Objetos)
+     * 
      * @author Sonia Anton Llanes
      * @created  10/01/2022
-     * @updated  11/01/2022
+     * @updated  18/01/2022
      */
 
 
@@ -16,10 +18,10 @@
         class UsuarioPDO{
             /**
              * validarUsuario() - comprueba en la base de datos si el usuario y su contraseña se han escrito correctamente
-             * @param type $entrada_codUsuario - codigo con el que el usuario está registrado
-             * @param type $entrada_password - password con el que el usuario está registrado
-             * @return false si no se ha encontrado ningun usuario
-             *         o el objeto PDOStatment con el registro del usuario encontrado
+             * @param string $entrada_codUsuario - codigo con el que el usuario está registrado
+             * @param string $entrada_password - password con el que el usuario está registrado
+             * @return object vacio=null si no se ha encontrado ningun usuario
+             *                o el objeto Usuario con los atributos del usuario encontrado
              */
             public static function validarUsuario($entrada_codUsuario, $entrada_password) {
                 $oUsuario=null; //variable para guardar los datos del usuario
@@ -45,7 +47,7 @@
              * @param type $entrada_codUsuario - codigo del usuario en el cual quiero modificar el numero de conexiones y la fecha de la ultima conexion
              */
             public static function registrarUltimaConexion($oUsuario){
-                //Actualizo los datos: fecha/hora ultima conexion 
+                //Actualizo los datos: fecha/hora ultima conexion en base de datos 
                     $sqlUpdate = <<<EOD
                                       UPDATE T01_Usuario SET 
                                         T01_NumConexiones = T01_NumConexiones+1,
@@ -61,7 +63,7 @@
                         $numConexiones= $oUsuario->getNumConexiones()+1;
                     $oUsuario->setNumConexiones($numConexiones);
                     $oUsuario->setFechaHoraUltimaConexion($ahora);
-                return $oUsuario;
+                return $oUsuario;  //devuelvo el usuario actualizado
             }
             
             public static function altaUsuario(){
