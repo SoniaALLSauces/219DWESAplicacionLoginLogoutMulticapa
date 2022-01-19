@@ -60,7 +60,7 @@
                                    ':codUsuario' => $oUsuario->getCodUsuario()];
                     $rdoUpdate = DBPDO::ejecutaConsulta($sqlUpdate, $parametros);
                 //Actualizo el objeto $oUsuario
-                        $numConexiones= $oUsuario->getNumConexiones()+1;
+                    $numConexiones= $oUsuario->getNumConexiones()+1;
                     $oUsuario->setNumConexiones($numConexiones);
                     $oUsuario->setFechaHoraUltimaConexion($ahora);
                 return $oUsuario;  //devuelvo el usuario actualizado

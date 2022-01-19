@@ -4,7 +4,7 @@
     /**
      * @author Sonia Anton Llanes
      * @created 22/12/2021
-     * @updated: 13/01/2021
+     * @updated: 19/01/2021
      */
 
 
@@ -39,7 +39,23 @@
             $_SESSION['pagina']='inicioPublico';     //y guardo login para la recarga de index
             header('Location: index.php');   //recargo el fichero index.php con la ventana login
                 exit;
-        }    
+        }   
+        
+    //Si pulso en Mantenimiento Departamentos me lleva a WIP:
+        if (isset($_REQUEST['editarPerfil'])){
+            $_SESSION['paginaAnterior']=$_SESSION['pagina']; //guardo la pagina actual en $_SESSION por si queremos volver
+            $_SESSION['pagina']='wip';     //y guardo login para la recarga de index
+            header('Location: index.php');   //recargo el fichero index.php con la ventana login
+                exit;
+        } 
+            
+    //Si pulso en Mantenimiento Departamentos me lleva a WIP:
+        if (isset($_REQUEST['workingProgress'])){
+            $_SESSION['paginaAnterior']=$_SESSION['pagina']; //guardo la pagina actual en $_SESSION por si queremos volver
+            $_SESSION['pagina']='wip';     //y guardo login para la recarga de index
+            header('Location: index.php');   //recargo el fichero index.php con la ventana login
+                exit;
+        } 
             
 
     //salida:

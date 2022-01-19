@@ -28,7 +28,8 @@
         'inicioPublico' => 'controller/cInicioPublico.php',
         'login' => 'controller/cLogin.php',
         'inicioPrivado' => 'controller/cInicioPrivado.php',
-        'detalle' => 'controller/cDetalle.php'
+        'detalle' => 'controller/cDetalle.php',
+        'wip' => 'controller/cWIP.php'
     ];
 
 //Array con las vistas
@@ -37,5 +38,6 @@
         'inicioPublico' => 'view/vInicioPublico.php',
         'login' => 'view/vLogin.php',
         'inicioPrivado' => 'view/vInicioPrivado.php',
-        'detalle' => 'view/vDetalle.php'
+        'detalle' => 'view/vDetalle.php',
+        'wip' => 'view/vWIP.php'
     ];

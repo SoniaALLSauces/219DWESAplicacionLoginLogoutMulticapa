@@ -8,15 +8,9 @@
 
     <section class="inicio">
 
-<!--        <div class="volver">
-            <a class="volver" href="">
-                <img src="webroot/images/volver.png">
-            </a>
-        </div>-->
         <div class="volver">
             <form name="volver" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-                <input id="volver" name="volver" type="submit" value="Volver">
-                <!--<input type="image" id="volver" src="webroot/images/volver.png" alt="Volver" title="Volver" width="100px">-->
+                <input id="volver" name="volver" type="submit" value="">
             </form>
         </div>
 
@@ -25,14 +19,22 @@
             <button>Detalle</button>
             <button>Log Out</button>
         </section>-->
-        <form class="botones" name="inicio" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-            <input type="submit" id="editarPerfil" value="Editar Perfil" name="editarPerfil">
-            <input type="submit" id="detalle" value="Detalle" name="detalle">
-            <input type="submit" id="cerrarSesion" value="Cerrar sesión" name="cerrarSesion">
-        </form>
-        <form class="mtoDepartamentos" name="workingProgress" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-            <input type="submit" id="workingProgress" value="Mantenimiento Departamentos" name="workingProgress">
-        </form>
+        <table class="tablaBotones">
+            <tr>
+                <form name="inicio" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+                    <td class="botones"><input type="submit" id="editarPerfil" value="Editar Perfil" name="editarPerfil"></td>
+                    <td class="botones"><input type="submit" id="detalle" value="Detalle" name="detalle"></td>
+                    <td class="botones"><input type="submit" id="cerrarSesion" value="Cerrar sesión" name="cerrarSesion"></td>
+                </form>
+            </tr>
+            <tr>
+                <form name="workingProgress" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+                    <td class="mtoDepartamentos" colspan="3"><input type="submit" id="workingProgress" value="Mantenimiento Departamentos" name="workingProgress"></td>
+                </form>
+            </tr>
+        </table>
+            
+            
 
         <section class="datosUsuario">
             

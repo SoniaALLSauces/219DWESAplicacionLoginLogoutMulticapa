@@ -38,39 +38,38 @@ a{text-decoration: none; color:#000; }
 .header{
     width: 100%;
 }
+
 .volver>*{
-    width: 100px;
     position: fixed;
     top: 0px;
     left: 0px;
 }
 
-.botones>*
+.botones>*,
 .mtoDepartamentos>*{
     height: 60px;
 }
-.botones{
+.logBoton,
+.tablaBotones{
     position: relative;
     float: right;
     right: 10px;
-}
-.mtoDepartamentos{
-    position: relative;
-    float: right;
-    right: 10px;
-    top: 70px;
 }
 
 .saludo{
-    width: 500px;
+    width: 70vw;
     position: relative;
-    top: 100px;
+    top: 200px;
     left: 100px;
 }
 .miWeb{
     width: 70vw;
     height: 70vh;
     line-height: 25vh;
+}
+.wip>*{
+    width: 80vw;
+    height: 70vh;
 }
 
 .tLogin{
@@ -120,10 +119,13 @@ h2{
     border-radius: 10px;
     padding: 40px;
 }
-
-#volver{
-    border: 0px;
+.saludo>*{
+    padding: 5px;
 }
+.wip{
+    margin: 5%;
+}
+
 .tLogin{
     border: 1px solid black;
     margin: 20px auto;
@@ -156,7 +158,7 @@ input{
     margin-top: 20px;
 }
 
-.botones>*
+.botones>*,
 .mtoDepartamentos>*{
     border: 2px solid #BF2411;
     margin: 5px 10px;
@@ -181,6 +183,15 @@ input{
 h2{
     background: white;
 }
+#volver{
+    background-image: url("../images/volver.jpg");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 40px;
+    border: none;
+    text-decoration: none;
+}
 
 .tLogin{
     background: white;
@@ -189,7 +200,7 @@ h2{
     background: #ecaaa1;
 }
 
-.botones>*, 
+.botones>*,
 .mtoDepartamentos>*,
 .saludo{
     background: #ecaaa1;
@@ -227,12 +238,22 @@ h4{
     text-align: center;
     vertical-align: middle;
 }
+.saludo{
+    font-size: 1.3rem;
+}
 .button{
     font-size: 1.3rem;
+}
+.tablaBotones>*{
+    text-align: center;
 }
 .botones>*,
 .mtoDepartamentos>*{
     font-size: 1.8vw;
+    vertical-align: middle;
+}
+.wip{
+    text-align: center;
     vertical-align: middle;
 }
 

@@ -8,7 +8,7 @@
 
     <section class="inicio">
 
-        <form class="botones" name="inicio" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+        <form class="logBoton botones" name="inicio" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <input type="submit" value="Log IN" name="log">
         </form>
 

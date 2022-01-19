@@ -10,8 +10,7 @@
         
         <div class="volver">
             <form name="volver" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-                <input id="volverD" name="volver" type="submit" value="Volver">
-                <!--<input type="image" id="volver" src="webroot/images/volver.png" alt="Volver" title="Volver" width="100px">-->
+                <input id="volver" name="volver" type="submit" value="">
             </form>
         </div>
       
