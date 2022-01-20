@@ -6,18 +6,16 @@
 
 
     /* Creo la base de datos DAW2xxxDBDepartamentos */
-        create database if not exists DB219DWESLoginLogoutMulticapa;
+        create database if not exists DB219DWESLoginLogoutTema5;
 
     /* Creo el usuario */
-        create user if not exists 'user219DWESLoginLogoutMulticapa'@'%' identified by 'paso';      /*INSTITUTO*/
---         create user if not exists 'user219DWESLoginLogoutMulticapa'@'%' identified by 'P@ssw0rd';  /*CASA*/
-
+        create user if not exists 'user219DWESLoginLogoutTema5'@'%' identified by 'paso';
 
     /* Damos permisos al usuario sobre la base de datos DB219DWESProyectoTema5 */
-        grant all privileges on DB219DWESLoginLogoutMulticapa.* to 'user219DWESLoginLogoutMulticapa'@'%';
+        grant all privileges on DB219DWESLoginLogoutTema5.* to 'user219DWESLoginLogoutTema5'@'%';
 
     /* Pongo en uso la base de datos creada en script DB219DWESProyectoTema5 */
-        use DB219DWESLoginLogoutMulticapa;  
+        use DB219DWESLoginLogoutTema5;  
 
     /* Creo la tabla Usuarios si no existe */
         create table if not exists T01_Usuario(  

@@ -31,6 +31,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     </head>
+    
     <body class="container">
 
 	<main class="main">
@@ -54,6 +55,7 @@
                     </li>
                 </ul>
             </nav>
-        </footer>       
+        </footer>  
+        
     </body>
 </html>

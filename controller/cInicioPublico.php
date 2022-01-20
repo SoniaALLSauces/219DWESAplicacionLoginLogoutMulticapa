@@ -17,7 +17,6 @@
         $_SESSION['pagina']='inicioPublico';  //cuando es la primera vez que entro y no hemos iniciado sesion abro el controlador del login
     }
         
-           // $_SESSION['pagina']= 'inicioPublico';
 
     //salida:
     require_once 'view/Layout.php';    //llamamos que se ejecute layout

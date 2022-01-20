@@ -7,9 +7,6 @@
      * @updated: 17/01/2021
      */
 
-
-        //Deserializamos el objeto guardado en la session guardandolo en una variable:
-            $usuarioActual = $_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa'];
     
     //Si pulso en volver:
         if (isset($_REQUEST['volver'])){

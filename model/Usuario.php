@@ -6,11 +6,10 @@
      * @updated  10/01/2022
      */
 
-     /**
-      * @class Usuario
-      * 
-      * 
-      */
+
+        /**
+         * 
+         */
 
         class Usuario{
             

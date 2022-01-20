@@ -61,7 +61,7 @@
             exit;
     }   
     else{   //Si no son correctas o aun no se ha pulsado "Iniciar Sesion" 
-        $_SESSION['pagina']= 'login';   //guardamos en la sesión para controlador y vista en 'login'
+        $_SESSION['pagina']= 'login';   //continuamos en la sesión para controlador y vista en 'login'
     }
     
 

@@ -17,4 +17,5 @@
         <section class="wip">
             <img src="webroot/images/WIP.jfif" alt="Work In Progress">
         </section>
+        
     </section>

@@ -1,7 +1,7 @@
 
 <!--  Author: Sonia Antón Llanes
   --  Created on: 22-diciembre-2021
-  --  Last Modify: 10-enero-2022
+  --  Last Modify: 19-enero-2022
   --  vLogin PROYECTO LOGIN LOGOUT: $vistaEnCurso tiene como valor login : mostramos el formulario
   -->
 

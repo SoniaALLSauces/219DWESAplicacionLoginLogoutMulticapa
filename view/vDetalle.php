@@ -48,8 +48,7 @@
                         }
                 echo "</table>";        
                     ?>
-                
-                    
+
                 <table class="tableVariable">
                     <tr>
                         <td class="nombreVariable"><h4>PHPINFO()</h4></td>

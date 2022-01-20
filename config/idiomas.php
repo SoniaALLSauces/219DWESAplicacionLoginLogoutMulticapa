@@ -8,11 +8,9 @@
      *   que se van a usar en los archivos de codigo
      */
 
-     /*CREAR UNA SOLA VARIABLE:
-        $aIdio;as = [
-            'es' => ['formulario' => 'Formulario',
-                     'inicio' => 'INICIAR SESION',
-                     ......]
+     /*CREAR UNA SOLA VARIABLE - ARRAY:
+      * Cada valor de este array es un array con las palabras en cada idioma
+        $aIdiomas = ['es','en','ga','ct','va','ar']
       */
 
         /* palabras en ESPAÑOL */

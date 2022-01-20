@@ -8,13 +8,13 @@
      */
 
 
-        //Si hay objeto guardado en la sesion: lo deserializamos el objeto guardado en la session guardandolo en una variable:
-            if($_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']!=null){
-                $usuarioActual = $_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa'];
-                    $descripcion = $usuarioActual->getDescUsuario(); //recuperamos la descripción del usuario
-                    $conexiones = $usuarioActual->getNumConexiones(); //recuperamos el numero de conexiones del usuario
-                    $conexionAnterior = $usuarioActual->getFechaHoraConexionAnterior(); //recuperamos la fecha de la conexion anterior del usuario
-            }
+    //Si hay objeto guardado en la sesion: lo deserializamos el objeto guardado en la session guardandolo en una variable:
+        if($_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']!=null){
+            $usuarioActual = $_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa'];
+                $descripcion = $usuarioActual->getDescUsuario(); //recuperamos la descripción del usuario
+                $conexiones = $usuarioActual->getNumConexiones(); //recuperamos el numero de conexiones del usuario
+                $conexionAnterior = $usuarioActual->getFechaHoraConexionAnterior(); //recuperamos la fecha de la conexion anterior del usuario
+        }
     
     //Si pulso en volver:
         if (isset($_REQUEST['volver'])){

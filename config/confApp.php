@@ -41,3 +41,4 @@
         'detalle' => 'view/vDetalle.php',
         'wip' => 'view/vWIP.php'
     ];
+    

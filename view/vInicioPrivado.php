@@ -14,11 +14,6 @@
             </form>
         </div>
 
-<!--        <section class="botones">
-            <button>Editar Perfil</button>
-            <button>Detalle</button>
-            <button>Log Out</button>
-        </section>-->
         <table class="tablaBotones">
             <tr>
                 <form name="inicio" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">

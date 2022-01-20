@@ -5,7 +5,7 @@
 
 
     /* Pongo en uso la base de datos creada en script creaDAW2SALDBDepartamentos */
-        use DB219DWESLoginLogoutMulticapa;  
+        use DB219DWESLoginLogoutTema5;  
 
 
     /* Inserto las tuplas a la tabla Departamentos*/

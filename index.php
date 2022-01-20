@@ -14,6 +14,7 @@
 //Iniciamos Sesion
     session_start();
 
+    
 //Requerimos que se cargue el controlador según si se ha iniciado sesión o no
     if(isset($_SESSION['pagina'])){
         require_once $controladores[$_SESSION['pagina']];  //cuando existe una sesion, abro el controlador que hay en la variable
