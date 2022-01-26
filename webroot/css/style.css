@@ -113,6 +113,12 @@ h2{
     padding: 40px;
 }
 
+.saludo{
+    border: 2px solid #BF2411;
+    border-radius: 10px;
+    padding: 40px;
+}
+
 .tLogin{
     border: 1px solid black;
     margin: 20px auto;
