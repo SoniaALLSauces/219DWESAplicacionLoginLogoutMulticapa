@@ -7,6 +7,12 @@
 
 
     <section class="login">
+        
+        <div class="volver">
+            <form name="volver" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+                <input type="image" id="volver" src="webroot/images/volver.png" alt="Volver" title="Volver" width="100px">
+            </form>
+        </div>
 
         <div class="div">
             <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">

@@ -27,7 +27,8 @@
     $controladores = [
         'inicioPublico' => 'controller/cInicioPublico.php',
         'login' => 'controller/cLogin.php',
-        'inicioPrivado' => 'controller/cInicioPrivado.php'
+        'inicioPrivado' => 'controller/cInicioPrivado.php',
+        'detalle' => 'controller/cDetalle.php'
     ];
 
 //Array con las vistas
@@ -35,5 +36,6 @@
         'layout' => 'view/Layout.php',
         'inicioPublico' => 'view/vInicioPublico.php',
         'login' => 'view/vLogin.php',
-        'inicioPrivado' => 'view/vInicioPrivado.php'
+        'inicioPrivado' => 'view/vInicioPrivado.php',
+        'detalle' => 'view/vDetalle.php'
     ];

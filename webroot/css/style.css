@@ -38,7 +38,7 @@ a{text-decoration: none; color:#000; }
 .header{
     width: 100%;
 }
-.volver>img{
+.volver>*{
     width: 100px;
     position: fixed;
     top: 0px;
@@ -58,6 +58,11 @@ a{text-decoration: none; color:#000; }
     position: relative;
     top: 100px;
     left: 100px;
+}
+.miWeb{
+    width: 70vw;
+    height: 70vh;
+    line-height: 25vh;
 }
 
 .tLogin{
@@ -99,7 +104,9 @@ a{text-decoration: none; color:#000; }
 h2{
     margin: 1% 1%;
 }
-
+.miWeb{
+    margin: 50px;
+}
 .saludo{
     border: 2px solid #BF2411;
     border-radius: 10px;
@@ -198,6 +205,13 @@ h4{
 }
 .centrado{
     text-align: center;
+}
+.bienvenidos{
+    font-family: 'Dancing Script', cursive;
+    font-size: 10vw;
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
 }
 .button{
     font-size: 1.3rem;

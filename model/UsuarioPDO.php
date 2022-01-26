@@ -45,7 +45,7 @@
              * @param type $entrada_codUsuario - codigo del usuario en el cual quiero modificar el numero de conexiones y la fecha de la ultima conexion
              */
             public static function registrarUltimaConexion($oUsuario){
-                //Actualizo los datos: fecha/hora ultima conexion 
+                //Actualizo los datos: fecha/hora ultima conexion en base de datos 
                     $sqlUpdate = <<<EOD
                                       UPDATE T01_Usuario SET 
                                         T01_NumConexiones = T01_NumConexiones+1,
@@ -61,7 +61,7 @@
                         $numConexiones= $oUsuario->getNumConexiones()+1;
                     $oUsuario->setNumConexiones($numConexiones);
                     $oUsuario->setFechaHoraUltimaConexion($ahora);
-                return $oUsuario;
+                return $oUsuario;  //devuelvo el usuario actualizado
             }
             
             public static function altaUsuario(){

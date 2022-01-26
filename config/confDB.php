@@ -12,13 +12,13 @@
 //        define ('PASSWORD', 'P@ssw0rd');
         
     /* Constantes BD Entorno Desarrollo Local */
-//        define ('HOST', 'mysql:host=daw219.sauces.local;dbname=DB219DWESLoginLogoutTema5');
-//        define ('USER', 'user219DWESLoginLogoutTema5');
-//        define ('PASSWORD', 'paso');
+        define ('HOST', 'mysql:host=daw219.sauces.local;dbname=DB219DWESLoginLogoutTema5');
+        define ('USER', 'user219DWESLoginLogoutTema5');
+        define ('PASSWORD', 'paso');
         
         
     /* Constantes BD Entorno Desarrollo Casa */
-        define ('HOST', 'mysql:host=192.168.1.119;dbname=DB219DWESLoginLogoutMulticapa');
-        define ('USER', 'user219DWESLoginLogoutMulticapa');
-        define ('PASSWORD', 'P@ssw0rd');
+//        define ('HOST', 'mysql:host=192.168.1.119;dbname=DB219DWESLoginLogoutMulticapa');
+//        define ('USER', 'user219DWESLoginLogoutMulticapa');
+//        define ('PASSWORD', 'P@ssw0rd');
 

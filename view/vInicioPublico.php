@@ -8,11 +8,14 @@
 
     <section class="inicio">
 
-        <section class="botones">
-            <button>Log IN</button>
-        </section>
+        <form class="botones" name="inicio" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+            <input type="submit" value="Log IN" name="log">
+        </form>
 
         <section class="miWeb">
-            <article class="bienvenidos"> Bienvenidos a MI WEB</article>
+            <article class="bienvenidos"> 
+                <p>Bienvenidos</p>
+                <p>a MI WEB</p>
+            </article>
         </section>
     </section>

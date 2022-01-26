@@ -7,13 +7,28 @@
      * @updated: 13/01/2021
      */
 
-    
+
+    //Si pulso en volver:
+        if (isset($_REQUEST['volver'])){
+//            $paginaActual=$_SESSION['pagina'];     //variable para guardar la pagina actual, por si queremos volver
+//                if(isset($_SESSION['paginaAnterior'])){  //
+//                    $_SESSION['pagina']=$_SESSION['paginaAnterior']; //cambio el valor de la pagina actual a la que teniamos guardada en anterior
+//                } else{
+//                    $_SESSION['pagina']='inicioPublico';
+//                }
+//            $_SESSION['paginaAnterior']=$paginaActual;     //y la pagina anterior la que habiamos guardado en la variable antes de cambiarla
+            $_SESSION['pagina']= 'inicioPrivado';
+            header('Location: index.php');  //recargo el fichero index.php con la ventana detalle
+                exit;
+        }
+
+         
+//Si se ha pulsado "Iniciar Sesion"
         $entradaOK = true;  //Variable para indicar que el formulario esta correcto
     //Array para guardar los errores del formulario:
         $aErrores = ['usuario' => null,   //E inicializo cada elemento
                      'password' => null];
         
-//Si se ha pulsado "Iniciar Sesion"
     if (isset($_REQUEST['login'])){
         //Valido los campos del formulario con la libreria de validacion
             $aErrores['usuario']= validacionFormularios::comprobarAlfabetico($_REQUEST['usuario'], 8, 1, 1);
@@ -35,11 +50,13 @@
         $entradaOK = false;   // si no se pulsa enviar, entradaOK es false
     }
 
+
     if($entradaOK){  //Si todas las entradas son correctas
         $oUsuario->setFechaHoraConexionAnterior($oUsuario->getFechaHoraUltimaConexion());  //guardamos la fecha/hora de la ultima conexion antes de modificar
         $usuarioActual=UsuarioPDO::registrarUltimaConexion($oUsuario);   //modificamos el usuario con los datos de la ultima entrada
         $_SESSION['usuario219DWESAplicacionLoginLogOutMulticapa']= $usuarioActual;  //Guardamos el objeto usuario en la sesion
         $_SESSION['pagina']= 'inicioPrivado';  //guardamos en la sesión para controlador y vista en 'inicio'
+        
         
             header('Location: index.php');  //recargo el fichero index.php
             exit;
@@ -49,5 +66,4 @@
     }
     
 
-    //salida:
     require_once 'view/Layout.php';    //llamamos que se ejecute layout

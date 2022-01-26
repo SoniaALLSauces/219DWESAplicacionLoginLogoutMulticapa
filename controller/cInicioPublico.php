@@ -8,8 +8,15 @@
      */
 
 
+    if (isset($_REQUEST['log'])){
+        $_SESSION['pagina']='login';  //cuando existe una sesion, abro el controlador que hay en la variable
+        header('Location: index.php');  //recargo el fichero index.php
+            exit;
+    } else{
+        $_SESSION['pagina']='inicioPublico';  //cuando es la primera vez que entro y no hemos iniciado sesion abro el controlador del login
+    }
         
-            
+           // $_SESSION['pagina']= 'inicioPublico';
 
     //salida:
     require_once 'view/Layout.php';    //llamamos que se ejecute layout
